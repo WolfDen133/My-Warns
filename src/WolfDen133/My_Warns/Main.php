@@ -166,7 +166,6 @@ class Main extends PluginBase implements Listener {
 
     /**
  * @param string $playername
- * @return mixed
  * @return string[]
  * @example $this->getServer()->getPlugin("MyWarns")->getWarns("WolfDen133");
  */
@@ -181,10 +180,10 @@ class Main extends PluginBase implements Listener {
 
             }
 
-            return null;
+            return "";
         }
 
-        return null;
+        return "";
     }
 
     /**
