@@ -42,7 +42,7 @@ class MyWarnsCommand extends Command implements PluginIdentifiableCommand
                    return;
                }
                
-               if ($warns === null) {
+               if (!$warns) {
                    $sender->sendMessage("You have no warns, well done!");
                    return;
                }
