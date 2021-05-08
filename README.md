@@ -9,7 +9,7 @@ A simple, easy-to-use, warn system for pocketmine 3.0.0
  
 ## Info
 
-IDs are provided in "user:warn" format, for remove command, all the other commands use a player name basis 
+IDs are provided in "user:warn" format, for remove command, all the other commands use a player name basis.
 Feel free to join my server, ask questions, report bugs and suggest features.
 
 ## Commands
