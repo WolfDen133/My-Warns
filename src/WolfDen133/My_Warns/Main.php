@@ -180,10 +180,10 @@ class Main extends PluginBase implements Listener {
 
             }
 
-            return "";
+            return [""];
         }
 
-        return "";
+        return [""];
     }
 
     /**
