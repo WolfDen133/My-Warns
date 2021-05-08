@@ -45,14 +45,14 @@ class SeeWarnsCommand extends Command implements PluginIdentifiableCommand
                         return;
                     }
                     
-                    if ($warns === null) {
+                    if (!$warns) {
                         $sender->sendMessage("$target has no warns.");
                         return;
                     }
 
                     $sender->sendMessage("$target's warns: ");
                     foreach ($warns as $warn) {
-                        if ($warn === false) {
+                        if (!$warn) {
                             continue;
                         }
 
