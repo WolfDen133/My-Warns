@@ -1,0 +1,19 @@
+
+# ██╗    ██╗ ██████╗ ██╗     ███████╗██████╗ ███████╗███╗   ██╗ ██╗██████╗ ██████╗
+# ██║    ██║██╔═══██╗██║     ██╔════╝██╔══██╗██╔════╝████╗  ██║███║╚════██╗╚════██╗
+# ██║ █╗ ██║██║   ██║██║     █████╗  ██║  ██║█████╗  ██╔██╗ ██║╚██║ █████╔╝ █████╔╝
+# ██║███╗██║██║   ██║██║     ██╔══╝  ██║  ██║██╔══╝  ██║╚██╗██║ ██║ ╚═══██╗ ╚═══██╗
+# ╚███╔███╔╝╚██████╔╝███████╗██║     ██████╔╝███████╗██║ ╚████║ ██║██████╔╝██████╔╝
+# ╚══╝╚══╝  ╚═════╝ ╚══════╝╚═╝     ╚═════╝ ╚══════╝╚═╝  ╚═══╝ ╚═╝╚═════╝ ╚═════╝
+
+# Welcome to My-Warns Config file, here you can set the timezone, time format.
+# This plugin is under General Public Copyright, feel free to look at the code.
+# If you are a beginner in php and PocketMineMP, I highly suggest you join my discord server @ https://discord.gg/XJ6CPpTDZE
+# I also please advice you don't redistribute this plugin, all of this plugin was hand coded and would be a real shame if it was copied and redistributed.
+# How ever if you feel like using this plugin as a start for your coding project feel free.
+# Have fun with the plugin. You can access me on my discord server above, good luck.
+
+# Timezones can be found @ https://www.php.net/manual/en/timezones.php
+# If you need further help with the plugin then ping me in my server.
+Time-Zone: 'UTC'
+Time-Format: 'd-m-y, h:m:s'
