@@ -49,7 +49,7 @@ class MyWarnsCommand extends Command implements PluginIdentifiableCommand
 
                $sender->sendMessage("Your warns: ");
                foreach ($warns as $warn) {
-                   if ($warn === false) {
+                   if (!$warn) {
                        continue;
                    }
 
