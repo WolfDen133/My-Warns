@@ -37,7 +37,7 @@ class MyWarnsCommand extends Command implements PluginIdentifiableCommand
            if ($sender instanceof Player) {
                $warns = $this->plugin->getWarns($sender->getName());
                 
-               if (count($warns) === 1 and $warns[0] === false) {
+               if (count($warns) == 1 ?? !$warns[0]) {
                    $sender->sendMessage("You have no warns, well done!");
                    return;
                }
