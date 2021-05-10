@@ -31,7 +31,6 @@ class Main extends PluginBase implements Listener {
 
 
     public function onLoad()
-    {
         $this->saveDefaultConfig();
 
         foreach ($this->getResources() as $resource) $this->saveResource($resource->getFilename());
@@ -211,7 +210,6 @@ class Main extends PluginBase implements Listener {
     public function hasWarn (string $warnId) : bool
     {
         $playername = $this->getPlayerNameFromID((explode(":", $warnId))[0]);
-        var_dump($playername);
 
         if (is_file($this->getDataFolder() . "warns/" . $playername . ".yml")) {
             $config = new Config($this->getDataFolder() . "warns/" . $playername . ".yml", Config::YAML);
@@ -255,8 +253,6 @@ class Main extends PluginBase implements Listener {
 
             $warns = (array)$config->get("Warns");
 
-            print_r($warns);
-
             foreach ($warns as $warn) {
 
                 if (!$warn) continue;
@@ -273,8 +269,6 @@ class Main extends PluginBase implements Listener {
 
                 }
             }
-
-            print_r($warns);
 
             $config->set("Warns", $warns);
             $config->save();
