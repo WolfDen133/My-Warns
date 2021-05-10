@@ -38,7 +38,7 @@ class MyWarnsCommand extends Command implements PluginIdentifiableCommand
                $warns = $this->plugin->getWarns($sender->getName());
 
                if (count($warns) === 1 and !$warns[0]) {
-                   $sender->sendMessage("You have no warns, well done!");
+                   $sender->sendMessage("You have no warns.");
                    return;
                }
 
