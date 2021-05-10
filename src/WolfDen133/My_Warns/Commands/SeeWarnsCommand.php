@@ -40,7 +40,7 @@ class SeeWarnsCommand extends Command implements PluginIdentifiableCommand
                 if (is_file($this->plugin->getDataFolder() . "warns/" . $target . ".yml")) {
                     $warns = $this->plugin->getWarns($target);
 
-                    if (count($warns) === 1 and $warns[0] == false or $warns === null) {
+                    if (count($warns) === 1 and !$warns[0]) {
                         $sender->sendMessage("$target has no warns.");
                         return;
                     }
