@@ -16,20 +16,20 @@ Feel free to join my server, ask questions, report bugs and suggest features. Fe
 
 | Command | Permission | Aliases | Description |
 | --------- | --------- | --------- | --------- |
-| `warn` | `command.warn.use` | ~ | Warn a player for bad behaviour |
-| `removewarn` | `command.removewarn.use` | `rwarn`, `rmwarn`, `removew` | Remove a false or old warn |
-| `mywarns` | `command.mywarns.use` | `myw`, `mwarns` | See your own warns |
-| `seewarns` | `command.seewarns.use` | `seew`, `swarns` | See a players current warns |
-| `players` | `command.players.use` | `p` | See a list of current online players |
+| `warn` | `mywarns.command.warn` | ~ | Warn a player for bad behaviour |
+| `removewarn` | `mywarns.command.removewarn` | `rwarn`, `rmwarn`, `removew` | Remove a false or old warn |
+| `mywarns` | `mywarns.command.mywarns` | `myw`, `mwarns` | See your own warns |
+| `seewarns` | `mywarns.command.seewarns` | `seew`, `swarns` | See a players current warns |
+| `players` | `mywarns.command.players` | `p` | See a list of current online players |
 
 ## Permissions
 | Permission | Default |
 | --------- | --------- |
-| `command.warn.use` | `op` |
-| `command.removewarn.use` | `op` |
-| `command.seewarns.use` | `op` |
-| `command.mywarns.use` | `true` |
-| `command.players.use` | `true` |
+| `mywarns.command.warn` | `op` |
+| `mywarns.command.removewarn` | `op` |
+| `mywarns.command.seewarns` | `op` |
+| `mywarns.command.mywarns` | `true` |
+| `mywarns.command.players` | `true` |
 
 ## API
 
