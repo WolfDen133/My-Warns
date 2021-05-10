@@ -31,6 +31,7 @@ class Main extends PluginBase implements Listener {
 
 
     public function onLoad()
+    {
         $this->saveDefaultConfig();
 
         foreach ($this->getResources() as $resource) $this->saveResource($resource->getFilename());
@@ -168,7 +169,7 @@ class Main extends PluginBase implements Listener {
  * @return string[]
  * @example $this->getServer()->getPlugin("MyWarns")->getWarns("WolfDen133");
  */
-    public function getWarns(string $playername)
+    public function getWarns(string $playername) : array
     {
         if (is_file($this->getDataFolder() . "warns/" . $playername . ".yml")) {
             $config = new Config($this->getDataFolder() . "warns/" . $playername . ".yml", Config::YAML);
