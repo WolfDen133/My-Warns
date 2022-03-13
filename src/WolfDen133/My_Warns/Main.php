@@ -7,14 +7,14 @@ use pocketmine\command\Command;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 use pocketmine\plugin\PluginBase;
 
 use pocketmine\utils\Config;
 
 use WolfDen133\My_Warns\Commands\MyWarnsCommand;
-use WolfDen133\My_Warns\Commands\PlayersCommand;
+//use WolfDen133\My_Warns\Commands\PlayersCommand;
 use WolfDen133\My_Warns\Commands\RemoveWarnCommand;
 use WolfDen133\My_Warns\Commands\SeeWarnsCommand;
 use WolfDen133\My_Warns\Commands\WarnCommand;
@@ -30,7 +30,7 @@ class Main extends PluginBase implements Listener {
     private $ids;
 
 
-    public function onLoad()
+    public function onLoad() : void
     {
         $this->saveDefaultConfig();
 
@@ -38,7 +38,7 @@ class Main extends PluginBase implements Listener {
 
     }
 
-    public function onEnable()
+    public function onEnable() : void
     {
 
         $this->ids = [];
@@ -79,7 +79,6 @@ class Main extends PluginBase implements Listener {
         $cmap->register("My-Warns", new MyWarnsCommand($this));
         $cmap->register("My-Warns", new RemoveWarnCommand($this));
         $cmap->register("My-Warns", new SeeWarnsCommand($this));
-        $cmap->register("My-Warns", new PlayersCommand($this));
     }
 
     private function unregisterCommands () : void
@@ -90,7 +89,6 @@ class Main extends PluginBase implements Listener {
         if ($cmap->getCommand("mywarns") instanceof Command) $cmap->unregister($cmap->getCommand("mywarns"));
         if ($cmap->getCommand("removewarn") instanceof Command) $cmap->unregister($cmap->getCommand("removewarn"));
         if ($cmap->getCommand("seewarns") instanceof Command) $cmap->unregister($cmap->getCommand("seewarns"));
-        if ($cmap->getCommand("players") instanceof Command) $cmap->unregister($cmap->getCommand("players"));
     }
 
     private function genID () : int
@@ -298,6 +296,11 @@ class Main extends PluginBase implements Listener {
             $config->set("Warns", $warns);
             $config->save();
         }
+    }
+
+    public static function getInstance(): self
+    {
+        return self::$instance;
     }
 
 }

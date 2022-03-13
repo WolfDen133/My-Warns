@@ -6,12 +6,12 @@ namespace WolfDen133\My_Warns\Commands;
 
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
-use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\utils\TextFormat;
 use WolfDen133\My_Warns\Main;
 
-class SeeWarnsCommand extends Command implements PluginIdentifiableCommand
+class SeeWarnsCommand extends Command implements PluginOwned
 {
 
     /** @var Main */
@@ -24,7 +24,7 @@ class SeeWarnsCommand extends Command implements PluginIdentifiableCommand
 
         $this->setAliases(["seew", "swarns"]);
         $this->setDescription("See a players current warns");
-        $this->setPermission("mywarns.command.seewarns");
+        $this->setPermission("seewarns.command");
         $this->setPermissionMessage(TextFormat::RED . "Unknown command. Try /help for a list of commands");
         $this->setUsage("Usage: /seewarns <playername>");
 
@@ -74,8 +74,8 @@ class SeeWarnsCommand extends Command implements PluginIdentifiableCommand
         }
     }
 
-    public function getPlugin(): Plugin
+    public function getOwningPlugin(): Plugin
     {
-        return $this->plugin;
+        return Main::getInstance();
     }
 }

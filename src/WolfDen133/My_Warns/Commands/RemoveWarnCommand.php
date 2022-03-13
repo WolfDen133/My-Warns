@@ -5,13 +5,13 @@ namespace WolfDen133\My_Warns\Commands;
 
 
 use pocketmine\command\CommandSender;
-use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\utils\TextFormat;
 use WolfDen133\My_Warns\Main;
 use pocketmine\command\Command;
 
-class RemoveWarnCommand extends Command implements PluginIdentifiableCommand
+class RemoveWarnCommand extends Command implements PluginOwned
 {
     /** @var Main */
     private $plugin;
@@ -22,7 +22,7 @@ class RemoveWarnCommand extends Command implements PluginIdentifiableCommand
 
         $this->setUsage("Usage: /removewarn <warnID: string>");
         $this->setPermissionMessage(TextFormat::RED . "Unknown command. Try /help for a list of commands");
-        $this->setPermission("mywarns.command.removewarn");
+        $this->setPermission("removewarn.command");
         $this->setDescription("Remove a false/old warn from a player");
         $this->setAliases(["rwarn", "rmwarn", "removew"]);
 
@@ -47,8 +47,8 @@ class RemoveWarnCommand extends Command implements PluginIdentifiableCommand
         }
     }
 
-    public function getPlugin(): Plugin
+    public function getOwningPlugin(): Plugin
     {
-        return $this->plugin;
+        return Main::getInstance();
     }
 }

@@ -6,18 +6,18 @@ namespace WolfDen133\My_Warns\Commands;
 
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
-use pocketmine\command\PluginIdentifiableCommand;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 use pocketmine\plugin\Plugin;
 
+use pocketmine\plugin\PluginOwned;
 use pocketmine\utils\TextFormat;
 
 use WolfDen133\My_Warns\Main;
 
 
-class WarnCommand extends Command implements PluginIdentifiableCommand
+class WarnCommand extends Command implements PluginOwned
 {
 
     /** @var Main */
@@ -32,7 +32,7 @@ class WarnCommand extends Command implements PluginIdentifiableCommand
         $this->setDescription("Give a player a warn for bad behaviour");
         $this->setUsage("Usage: /warn [target: string...] <warn: string> (-s: string)");
         $this->setPermissionMessage(TextFormat::RED . "Unknown Command. Try /help for a list of commands");
-        $this->setPermission("mywarns.command.warn");
+        $this->setPermission("warn.command");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args)
@@ -46,7 +46,7 @@ class WarnCommand extends Command implements PluginIdentifiableCommand
                 foreach ($targets as $target) {
 
                     $name = $target;
-                    $target = $this->plugin->getServer()->getPlayer($target);
+                    $target = $this->plugin->getServer()->getPlayerByPrefix($target);
 
                     if ($target instanceof Player) {
 
@@ -94,8 +94,8 @@ class WarnCommand extends Command implements PluginIdentifiableCommand
         }
     }
 
-    public function getPlugin() : Plugin
+    public function getOwningPlugin(): Plugin
     {
-        return $this->plugin;
+        return Main::getInstance();
     }
 }
