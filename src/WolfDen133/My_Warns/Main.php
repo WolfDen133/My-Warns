@@ -14,7 +14,6 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
 use WolfDen133\My_Warns\Commands\MyWarnsCommand;
-//use WolfDen133\My_Warns\Commands\PlayersCommand;
 use WolfDen133\My_Warns\Commands\RemoveWarnCommand;
 use WolfDen133\My_Warns\Commands\SeeWarnsCommand;
 use WolfDen133\My_Warns\Commands\WarnCommand;
