@@ -4,15 +4,15 @@ namespace WolfDen133\My_Warns\Commands;
 
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
-use pocketmine\command\PluginIdentifiableCommand;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\utils\TextFormat;
 
 use WolfDen133\My_Warns\Main;
 
-class MyWarnsCommand extends Command implements PluginIdentifiableCommand
+class MyWarnsCommand extends Command implements PluginOwned
 {
 
     /** @var Main */
@@ -22,9 +22,9 @@ class MyWarnsCommand extends Command implements PluginIdentifiableCommand
     {
         parent::__construct("mywarns");
 
-        $this->setAliases(["myw", "mwarns"]);
+        $this->setAliases(["warnings", "mywarnings"]);
         $this->setDescription("See your warns");
-        $this->setPermission("mywarns.command.mywarns");
+        $this->setPermission("mywarns.command");
         $this->setPermissionMessage(TextFormat::RED . "Unknown command. Try /help for a list of commands");
         $this->setUsage("Usage: /mywarns");
 
@@ -69,9 +69,9 @@ class MyWarnsCommand extends Command implements PluginIdentifiableCommand
        }
     }
 
-    public function getPlugin(): Plugin
+    public function getOwningPlugin(): Plugin
     {
-        return $this->plugin;
+        return Main::getInstance();
     }
 
 }

@@ -1,21 +1,17 @@
 ---
 name: My-Warns
-version: 1.0.0
+version: 2.0.0
 main: WolfDen133\My_Warns\Main
-api: 3.0.0
+api: 4.0.0
 author: WolfDen133
 
 permissions:
-  mywarns.permission.master:
-    children:
-      mywarns.command.warn:
-        default: op
-      mywarns.command.removewarn:
-        default: op
-      mywarns.command.seewarns:
-        default: op
-      mywarns.command.mywarns:
-        default: true
-      mywarns.command.players:
-        default: true
+  warn.command:
+    default: op
+  removewarn.command:
+    default: op
+  seewarns.command:
+    default: op
+  mywarns.command:
+    default: true
 ...
