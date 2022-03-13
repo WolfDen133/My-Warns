@@ -14,6 +14,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
 use WolfDen133\My_Warns\Commands\MyWarnsCommand;
+//use WolfDen133\My_Warns\Commands\PlayersCommand;
 use WolfDen133\My_Warns\Commands\RemoveWarnCommand;
 use WolfDen133\My_Warns\Commands\SeeWarnsCommand;
 use WolfDen133\My_Warns\Commands\WarnCommand;
@@ -28,7 +29,8 @@ class Main extends PluginBase implements Listener {
     /** @var int[] */
     private $ids;
 
-
+    private static $instance;
+    
     public function onLoad() : void
     {
         $this->saveDefaultConfig();
@@ -47,6 +49,8 @@ class Main extends PluginBase implements Listener {
         $this->registerIDs();
 
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
+
+        self::$instance = $this;
     }
 
 
