@@ -20,7 +20,6 @@ Feel free to join my server, ask questions, report bugs and suggest features. Fe
 | `removewarn` | `mywarns.command.removewarn` | `rwarn`, `rmwarn`, `removew` | Remove a false or old warn |
 | `mywarns` | `mywarns.command.mywarns` | `myw`, `mwarns` | See your own warns |
 | `seewarns` | `mywarns.command.seewarns` | `seew`, `swarns` | See a players current warns |
-| `players` | `mywarns.command.players` | `p` | See a list of current online players |
 
 ## Permissions
 | Permission | Default |
@@ -29,7 +28,6 @@ Feel free to join my server, ask questions, report bugs and suggest features. Fe
 | `mywarns.command.removewarn` | `op` |
 | `mywarns.command.seewarns` | `op` |
 | `mywarns.command.mywarns` | `true` |
-| `mywarns.command.players` | `true` |
 
 ## API
 
