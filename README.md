@@ -1,5 +1,5 @@
 # My-Warns
-A simple, easy-to-use, warn system for pocketmine 3.0.0
+A simple, easy-to-use, warn system for pocketmine 4.0.0
 
  This plugin is under General Public Copyright, feel free to look at the code.
  If you are a beginner in php and PocketMineMP, I highly suggest you join my discord server @ https://discord.gg/XJ6CPpTDZE
